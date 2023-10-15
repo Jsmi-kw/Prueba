@@ -20,7 +20,12 @@ df = pd.read_csv('diabetes.csv')
 st.title('Diabetes Checkup')
 st.sidebar.header('Patient Data')
 st.subheader('Training Data Stats')
-st.write(df.describe())
+
+# Convertir tipos de datos a tipos compatibles
+df_desc = df.describe().astype(object)
+
+# Mostrar el DataFrame convertido
+st.write(df_desc)
 
 # X AND Y DATA
 x = df.drop(['Outcome'], axis = 1)
