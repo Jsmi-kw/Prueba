@@ -15,9 +15,12 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
 import seaborn as sns
 
+# URL cruda del archivo en GitHub
+url = 'https://github.com/Jsmi-kw/Prueba/blob/main/diabetes.csv'
 
+# Lectura del archivo CSV desde la URL
+df = pd.read_csv(url)
 
-df = pd.read_csv(![](diabetes.csv))
 
 # HEADINGS
 st.title('Diabetes Checkup')
